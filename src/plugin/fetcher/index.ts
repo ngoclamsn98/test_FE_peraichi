@@ -1,11 +1,6 @@
 import { ResponseDto, APIRequestDto } from "./declaration";
 const BASE_API = "https://httpbin.org";
-export const handlerCallApi = async ({
-  url,
-  body,
-  params,
-  method,
-}: APIRequestDto) => {
+export const handlerCallApi = async ({ url, body, method }: APIRequestDto) => {
   const headers = new Headers({});
 
   if (!headers.get("Content-Type")) {
@@ -16,7 +11,6 @@ export const handlerCallApi = async ({
   try {
     const res = await fetch(`${BASE_API}/${url}`, {
       method: method,
-      params: params,
       headers: headers,
       body: body,
     });

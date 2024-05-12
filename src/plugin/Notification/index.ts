@@ -1,4 +1,4 @@
-import { ref, inject, App, createApp, h } from "vue";
+import { inject, App, createApp, h } from "vue";
 import Notify from "@/components/Notify";
 import { NotificationType } from "./declaration";
 

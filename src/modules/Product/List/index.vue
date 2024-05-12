@@ -27,9 +27,9 @@
 
     <Button
       :disabled="!products.length || loading"
+      :loading="loading"
       @click="handlerCreateProduct"
     >
-      <Loading v-if="loading" />
       <span>Submit</span>
     </Button>
   </div>
@@ -38,7 +38,6 @@
 <script setup>
 import ProductItem from "./components/ProductItem";
 import Folder from "@/components/Icons/Folder";
-import Loading from "@/components/Icons/Loading";
 import Upload from "@/components/Upload";
 import Button from "@/components/Button";
 import { handlerCallApi } from "@/plugin/fetcher";

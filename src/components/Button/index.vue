@@ -3,13 +3,20 @@
     class="btn"
     :disabled="disabled"
   >
+    <Loading v-if="loading" />
     <slot />
   </button>
 </template>
 
 <script setup>
+import Loading from "@/components/Icons/Loading";
+
 defineProps({
   disabled: {
+    type: Boolean,
+    default: false,
+  },
+  loading: {
     type: Boolean,
     default: false,
   },
